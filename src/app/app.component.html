@@ -1,0 +1,8 @@
+<app-header></app-header>
+<app-record wins="{{ wins | number }}" losses="{{ losses | number }}" streak="{{ streak | number }}"></app-record>
+<app-user-selection (userSelection)="onButtonClicked($event)"></app-user-selection>
+<div *ngIf="aiSelection != ''" class="container bg-white py-3 px-5 my-3 text-center">
+  <app-ai-selection aiSelection="{{ aiSelection }}"></app-ai-selection>
+  <app-result result="{{ result }}"></app-result>
+</div>
+<app-footer></app-footer>
